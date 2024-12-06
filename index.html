@@ -8,8 +8,51 @@
     <title>Sign Up Form</title>
 </head>
 
-<body>
-    <h1>Sign Up</h1>
+<body class="flex row center">
+    <aside class="hero-img-txt flex col center">
+        <div class="logo">Logo text</div>
+        <p class="credit">Credit</p>
+    </aside>
+    <main class="form-container flex col">
+        <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam illo accusamus suscipit
+            iure eum explicabo natus eligendi nostrum blanditiis magni nemo ipsum id voluptatem commodi provident est
+            inventore, molestias sapiente.</p>
+        <form action="" class="flex col">
+            <div class="form-wrapper flex col">
+                <p>Sign-up</p>
+                <section class="input-field-group flex row">
+                    <div class=" input-field flex col">
+                        <label for="first-name" class="input-label">First Name</label>
+                        <input type="text" id="first-name" required>
+                    </div>
+                    <div class="input-field flex col">
+                        <label for="last-name" class="input-label">Last Name</label>
+                        <input type="text" id="last-name" required>
+                    </div>
+                    <div class="input-field flex col">
+                        <label for="email" class="input-label">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="input-field flex col">
+                        <label for="phone-no" class="input-label">Phone Number</label>
+                        <input type="tel" id=" phone-no" required>
+                    </div>
+                    <div class="input-field flex col">
+                        <label for="password" class="input-label">Password</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <div class="input-field flex col">
+                        <label for="confirm-password" class="input-label">Confirm Password</label>
+                        <input type="password" id="confirm-password" required>
+                    </div>
+                </section>
+            </div>
+            <div class="submit-and-link flex col">
+                <button type="submit">Register</button>
+                <p class="">Already have an account? <a href="#">Login Here</a></p>
+            </div>
+        </form>
+    </main>
 </body>
 <script src="./assets/js/script.js"></script>
 
