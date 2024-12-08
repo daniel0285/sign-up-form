@@ -11,10 +11,9 @@
 <body class="flex row center">
     <aside class="hero-img-txt flex col center">
         <div class="logo flex col">
-            <img src="./assets/img/odin-lined.png" alt="Odin Logo">
+            <img src="./assets/img/odin-lined.png" alt="Logo for The Odin Project">
             <h1>THE ODIN PROJECT</h1>
         </div>
-        <!-- <p class="credit">Credit</p> -->
     </aside>
     <main class="form-container flex col">
         <p class="description">This is not a real online service! You know you need something like this in your life to
@@ -24,39 +23,45 @@
                 <h2>Let's do this!</h2>
                 <section class="input-field-group flex row">
                     <div class=" input-field flex col">
-                        <input type="text" id="first-name" placeholder="" required>
+                        <input type="text" id="first-name" placeholder="e.g. Thor" required aria-required="true">
                         <label for="first-name" class="input-label">First Name</label>
                     </div>
                     <div class="input-field flex col">
-                        <input type="text" id="last-name" placeholder="" required>
+                        <input type="text" id="last-name" placeholder="e.g. Odinson" required aria-required="true">
                         <label for="last-name" class="input-label">Last Name</label>
                     </div>
                     <div class="input-field flex col">
-                        <input type="email" id="email" placeholder="" required>
+                        <input type="email" id="email" placeholder="e.g. yourname@email.com" required
+                            aria-required="true">
                         <label for="email" class="input-label">Email</label>
 
                     </div>
                     <div class="input-field flex col">
-                        <input type="tel" id="phone-no" placeholder="" pattern="[0-9]" required>
+                        <input type="tel" id="phone-no" placeholder="e.g. XXX-XXX-XXXX"
+                            pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+                            required aria-required="true">
                         <label for="phone-no" class="input-label">Phone Number</label>
                     </div>
                     <div class="input-field flex col">
-                        <input type="password" id="password" placeholder="" required>
+                        <input type="password" id="password"
+                            placeholder="(Minimum of 8 characters) e.g. Your$ecureP@ss1"
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required aria-required="true">
                         <label for="password" class="input-label">Password</label>
                     </div>
                     <div class="input-field flex col">
-                        <input type="password" id="confirm-password" placeholder="" required>
+                        <input type="password" id="confirm-password" placeholder="Retype your password" required
+                            aria-required="true">
                         <label for="confirm-password" class="input-label">Confirm Password</label>
                     </div>
                 </section>
             </div>
             <div class="submit-and-link flex col">
-                <button type="submit">Register</button>
+                <button type="submit" aria-label="Register">Register</button>
                 <p class="">Already have an account? <a href="#">Login Here</a></p>
             </div>
         </form>
     </main>
+    <script src="./assets/js/script.js"></script>
 </body>
-<script src="./assets/js/script.js"></script>
 
 </html>

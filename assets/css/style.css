@@ -12,7 +12,9 @@
   --form-txt-clr: white;
 
   --input-field-clr: rgba(255, 255, 255, 0.09);
+  --placeholder-clr: rgb(173, 173, 173);
   --input-border: 3px;
+  --form-gap: 20px;
 
   --focus-clr: rgb(114, 184, 255);
   --valid-clr: rgb(74, 255, 126);
@@ -26,13 +28,13 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
   background-color: var(--hero-bg-clr);
+}
 
-  a {
-    text-decoration: none;
-    border-bottom: 2px;
-    padding-bottom: 1px;
-    font-weight: bold;
-  }
+a {
+  text-decoration: none;
+  border-bottom: 2px;
+  padding-bottom: 1px;
+  font-weight: bold;
 }
 
 .flex {
@@ -69,9 +71,8 @@ body {
 
   h1 {
     font-family: Norse-Bold;
-    color: white;
+    color: var(--form-txt-clr);
     font-size: 3rem;
-    padding: 0;
   }
 }
 
@@ -83,7 +84,7 @@ body {
   font-size: 1rem;
   color: var(--form-txt-clr);
   justify-content: center;
-  gap: 10px;
+  gap: var(--form-gap);
   border-radius: 25px 0px 0px 25px;
 
   .description,
@@ -98,13 +99,10 @@ body {
   }
 
   form {
-    gap: 25px;
+    gap: var(--form-gap);
 
     .form-wrapper {
       background-color: var(--forum-grp-clr);
-      -webkit-box-shadow: 5px 98px 300px -119px rgba(0, 0, 0, 0.53);
-      -moz-box-shadow: 5px 98px 300px -119px rgba(0, 0, 0, 0.53);
-      box-shadow: 5px 98px 300px -119px rgba(0, 0, 0, 0.53);
       padding: 25px 40px;
 
       h2 {
@@ -123,23 +121,30 @@ body {
     .input-field-group {
       gap: 20px 30px;
       flex-wrap: wrap;
-      width: 80%;
+      width: 100%;
     }
 
     .input-field {
       position: relative;
-      width: 45%;
+      width: 40%;
 
       input {
         padding: 16px 8px;
         outline: none;
         border: none;
-        /* border-radius: 0px 20px 20px 0px; */
         border-bottom: var(--input-border) solid transparent;
         background-color: var(--input-field-clr);
         transition: background-color 0.4s ease;
         width: 100%;
         color: var(--form-txt-clr);
+
+        &::placeholder {
+          color: transparent;
+        }
+
+        &:focus::placeholder {
+          color: var(--placeholder-clr);
+        }
 
         &:focus,
         &:not(:placeholder-shown),
@@ -209,10 +214,6 @@ body {
         transition: 0.1s ease;
         opacity: 70%;
         font-weight: bold;
-
-        /* &::after {
-          content: " *";
-        } */
       }
     }
   }
